@@ -1,6 +1,3 @@
-Below is the `README.md` file for your distributed text search system project.
-
-```markdown
 # Distributed Text Search System
 
 ## Overview
@@ -9,18 +6,18 @@ This project implements a distributed text search system using Java, consisting 
 
 ### Key Components
 1. **Coordinator**:
-   - Manages the query process.
-   - Communicates with workers to fetch and aggregate results.
-   - Computes final document scores and sorts results.
+    - Manages the query process.
+    - Communicates with workers to fetch and aggregate results.
+    - Computes final document scores and sorts results.
 
 2. **Worker**:
-   - Processes a subset of documents.
-   - Computes term frequencies for the received query.
-   - Sends results back to the coordinator.
+    - Processes a subset of documents.
+    - Computes term frequencies for the received query.
+    - Sends results back to the coordinator.
 
 3. **Service Registry**:
-   - Maintains a list of active worker addresses.
-   - Facilitates dynamic registration and discovery of workers.
+    - Maintains a list of active worker addresses.
+    - Facilitates dynamic registration and discovery of workers.
 
 ---
 
@@ -76,19 +73,15 @@ javac -d out src/main/java/Registration_Discovery/*.java
 2. Add `.txt` files containing text data to these directories.
 
 ### Step 4: Start Coordinator
-Run the coordinator and provide a query:
-```bash
-java -cp out Registration_Discovery.Coordinator
+Run the coordinator and provide a query
+
 ```
 
 ---
 ### Step 5: Start Worker Nodes
-Run each worker on a different port:
-```bash
-java -cp out Registration_Discovery.Worker <port>
-```
+Run each worker on a different port
 
-
+---
 
 ## Code Highlights
 
